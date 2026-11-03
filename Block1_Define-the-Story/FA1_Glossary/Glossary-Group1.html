@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Glossary – Group 1</title>
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<header class="doc">
+  <h1>FA1 – Glossary “EV Charging Network”</h1>
+  <div class="meta">Requirements Engineering Project · Group 1 · Version 1.0 (draft)</div>
+</header>
+
+<p class="note">
+  This glossary defines the unique terms used throughout the project (User Story Map, Epics &amp; User Stories,
+  Domain Model, Feature Files, Step Code and Java Business Objects). The column <em>Synonyms</em> lists the
+  alternative terms found in the customer needs document; these synonyms are <strong>not</strong> used in project artifacts.
+</p>
+
+<h2>1. Roles</h2>
+<table>
+  <tr><th style="width:18%">Term</th><th>Definition</th><th style="width:24%">Synonyms (customer needs)</th></tr>
+  <tr><td class="term">Owner</td>
+      <td>The private entrepreneur who operates the EV Charging Network. The Owner manages Locations, Chargers and Prices, monitors the Network Status and can view the Transaction History of every Customer Account.</td>
+      <td class="syn">CPO (Charge Point Operator), Operator, Private Entrepreneur, Network Owner</td></tr>
+  <tr><td class="term">Customer</td>
+      <td>A registered person who uses the Chargers of the EV Charging Network to charge an electric vehicle. A Customer owns exactly one Customer Account.</td>
+      <td class="syn">Client, User, Driver</td></tr>
+</table>
+
+<h2>2. Network &amp; Infrastructure</h2>
+<table>
+  <tr><th style="width:18%">Term</th><th>Definition</th><th style="width:24%">Synonyms (customer needs)</th></tr>
+  <tr><td class="term">EV Charging Network</td>
+      <td>The entirety of all Locations operated by the Owner. The software solution manages and bills the EV Charging Network.</td>
+      <td class="syn">Network, Charging Network, Ladenetzwerk, Elektro-Tankstellen-Netz</td></tr>
+  <tr><td class="term">Location</td>
+      <td>A physical site of the EV Charging Network with a unique name and address. A Location has one or more Chargers and its own Price List that applies to all of its Chargers.</td>
+      <td class="syn">Site, Charging Station, Electric Charging Station, EV-Charging-Station, Station</td></tr>
+  <tr><td class="term">Charger</td>
+      <td>A single charging point at a Location to which exactly one electric vehicle can be connected at a time. Every Charger has a unique identifier, one Charging Mode (AC or DC) and a Charger Status.</td>
+      <td class="syn">Charging Point, Charge Point, EVSE (Electric Vehicle Supply Equipment), EV-Charge-Point, Charging Bay, Charging Unit</td></tr>
+  <tr><td class="term">Charging Mode</td>
+      <td>The type of electric current a Charger delivers: <strong>AC</strong> (alternating current, slower charging) or <strong>DC</strong> (direct current, fast charging). The Charging Mode determines which Prices apply.</td>
+      <td class="syn">Charger Type, Type, Current Type, AC/DC</td></tr>
+  <tr><td class="term">Charger Status</td>
+      <td>The current operating state of a Charger. Possible values:
+        <strong>Available</strong> – ready to start a Charging Session;
+        <strong>Occupied</strong> – a Charging Session is in progress;
+        <strong>Out of Order</strong> – the Charger cannot be used.</td>
+      <td class="syn">State, Operating Status, Operational State</td></tr>
+  <tr><td class="term">Network Status</td>
+      <td>An overview list, available to Owner and Customer at any time, showing for every Location the currently valid Price List and the Charger Status of each Charger.</td>
+      <td class="syn">Status List, Current Status, Station Overview</td></tr>
+</table>
+
+<h2>3. Pricing</h2>
+<table>
+  <tr><th style="width:18%">Term</th><th>Definition</th><th style="width:24%">Synonyms (customer needs)</th></tr>
+  <tr><td class="term">Price List</td>
+      <td>The set of Prices of one Location, consisting of the Energy Price and the Parking Price for each Charging Mode (AC and DC). The Owner can change a Price List at any time; it applies to all Chargers of that Location. Different Locations may have different Price Lists at the same time.</td>
+      <td class="syn">Station Prices, Prices, Tariff</td></tr>
+  <tr><td class="term">Energy Price</td>
+      <td>The price per kilowatt-hour (EUR/kWh) of Charged Energy, defined separately for AC and DC.</td>
+      <td class="syn">kWh Price, kWh AC / kWh DC, Price per kWh</td></tr>
+  <tr><td class="term">Parking Price</td>
+      <td>The price per minute (EUR/min) of Charging Duration, defined separately for AC and DC.</td>
+      <td class="syn">Time Price, Parking Price per Minute, Price per Minute</td></tr>
+  <tr><td class="term">Price Lock</td>
+      <td>Rule that a Charging Session is always billed with the Price List valid at the <strong>start</strong> of that Charging Session; later price changes do not affect it.</td>
+      <td class="syn">“prices at the beginning of the loading process apply”</td></tr>
+</table>
+
+<h2>4. Customer Account &amp; Billing</h2>
+<table>
+  <tr><th style="width:18%">Term</th><th>Definition</th><th style="width:24%">Synonyms (customer needs)</th></tr>
+  <tr><td class="term">Registration</td>
+      <td>The process in which a person creates a Customer Account. Only registered Customers can top up and charge.</td>
+      <td class="syn">Sign-up, Register</td></tr>
+  <tr><td class="term">Customer Account</td>
+      <td>The prepaid account of a Customer that stores the Balance and all Transactions. A Customer Account must have sufficient Balance before a Charging Session can start (prepaid system).</td>
+      <td class="syn">Account, Client Account, Prepaid Account</td></tr>
+  <tr><td class="term">Top-Up</td>
+      <td>A Transaction in which a Customer adds money to the Customer Account in advance. A Top-Up increases the Balance.</td>
+      <td class="syn">Deposit, Pre-load, Prepaid Load, Recharge</td></tr>
+  <tr><td class="term">Balance</td>
+      <td>The current amount of money available in a Customer Account: the sum of all Top-Ups minus the sum of all Charging Costs.</td>
+      <td class="syn">Credit, Account Balance</td></tr>
+  <tr><td class="term">Charging Session</td>
+      <td>One charging process of a Customer at one Charger, from start to end. A Charging Session records Location, Charger, Charging Mode, start time, Charging Duration and Charged Energy, and results in a Charging Cost.</td>
+      <td class="syn">Loading Process, Charging Process, Charging Service, Loading, Charge</td></tr>
+  <tr><td class="term">Charged Energy</td>
+      <td>The amount of electric energy transferred to the vehicle during a Charging Session, measured in kilowatt-hours (kWh).</td>
+      <td class="syn">Loaded Energy, Energy, kWh</td></tr>
+  <tr><td class="term">Charging Duration</td>
+      <td>The time in minutes from start to end of a Charging Session.</td>
+      <td class="syn">Charging Time, Duration of Use, Parking Time</td></tr>
+  <tr><td class="term">Charging Cost</td>
+      <td>The amount billed for one Charging Session: Charged Energy × Energy Price + Charging Duration × Parking Price, using the Price List of the Charger’s Location under the Price Lock. The Charging Cost is deducted from the Balance.</td>
+      <td class="syn">Charging Expenses, Cumulated Prices (kWh &amp; Parking), Charging Fee</td></tr>
+  <tr><td class="term">Billing</td>
+      <td>The calculation of the Charging Cost at the end of a Charging Session and its deduction from the Customer Account.</td>
+      <td class="syn">Bill, Invoicing</td></tr>
+  <tr><td class="term">Transaction</td>
+      <td>A single entry in a Customer Account: either a Top-Up or a Charging Session with its Charging Cost.</td>
+      <td class="syn">Account Activity Entry, Booking</td></tr>
+  <tr><td class="term">Transaction History</td>
+      <td>A date-sorted list of all Transactions of one Customer Account. Each Charging Session entry shows Location name, Charger, Charging Mode, Charging Duration, Charged Energy and Charging Cost (energy &amp; parking). The Transaction History ends with the current Balance. Visible to the Customer and the Owner at any time.</td>
+      <td class="syn">Account Activity, EV-Charging-Ledger, Ledger, Transaction-History, Prepaid-Load Items</td></tr>
+</table>
+</body>
+</html>

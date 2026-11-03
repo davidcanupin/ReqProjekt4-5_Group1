@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><title>Epics & User Stories – Group 1</title>
+<link rel="stylesheet" href="../style.css"></head><body>
+
+<header class="doc"><h1>FA3 – Epics &amp; User Stories “EV Charging Network”</h1><div class="meta">Requirements Engineering Project · Group 1 · Version 1.0 (draft) · based on IA2 User Story Map MVP</div></header>
+<p class="note">Each Epic is derived from the narrative flow (Backbone) of the User Story Map and represents the scope of one future BDD Feature File. Each User Story corresponds to exactly one task of the User Story Map. Format: <em>As &lt;user&gt; I want &lt;function&gt; so that &lt;value&gt;</em>. All terms follow the Glossary (FA1).</p>
+<div class="epic"><div class="epic-head"><span class="id">E1</span><strong>Location Management</strong><span class="story">As Owner, I want to manage Locations, so that I can represent the sites of my EV Charging Network in the system.</span></div>
+<table><tr><th style="width:9%">ID</th><th>User Story</th><th style="width:11%">Priority</th></tr>
+<tr><td>US01</td><td>As Owner, I want to create Location, so that a new site of my EV Charging Network is available in the system.</td><td><span class="badge mvp">MVP</span></td></tr>
+<tr><td>US02</td><td>As Owner, I want to read Locations, so that I have an overview of all my Locations.</td><td><span class="badge mvp">MVP</span></td></tr>
+<tr><td>US03</td><td>As Owner, I want to update Location, so that Location data stays correct.</td><td><span class="badge backlog">Backlog</span></td></tr>
+<tr><td>US04</td><td>As Owner, I want to delete Location, so that closed sites are removed from the EV Charging Network.</td><td><span class="badge backlog">Backlog</span></td></tr>
+</table></div>
+<div class="epic"><div class="epic-head"><span class="id">E2</span><strong>Charger Management</strong><span class="story">As Owner, I want to manage the Chargers of each Location, so that Customers can charge their vehicles with AC or DC.</span></div>
+<table><tr><th style="width:9%">ID</th><th>User Story</th><th style="width:11%">Priority</th></tr>
+<tr><td>US05</td><td>As Owner, I want to create Charger, so that a new AC or DC Charger can be used at a Location.</td><td><span class="badge mvp">MVP</span></td></tr>
+<tr><td>US06</td><td>As Owner, I want to read Chargers, so that I know which Chargers exist at each Location.</td><td><span class="badge mvp">MVP</span></td></tr>
+<tr><td>US07</td><td>As Owner, I want to update Charger, so that Charger data (e.g. Charging Mode) stays correct.</td><td><span class="badge backlog">Backlog</span></td></tr>
+<tr><td>US08</td><td>As Owner, I want to delete Charger, so that removed Chargers are no longer offered.</td><td><span class="badge backlog">Backlog</span></td></tr>
+</table></div>
+<div class="epic"><div class="epic-head"><span class="id">E3</span><strong>Price Management</strong><span class="story">As Owner, I want to manage the Price List of each Location, so that Charging Sessions are billed correctly and I can react to market changes.</span></div>
+<table><tr><th style="width:9%">ID</th><th>User Story</th><th style="width:11%">Priority</th></tr>
+<tr><td>US09</td><td>As Owner, I want to create Price List, so that Charging Sessions at a Location can be billed.</td><td><span class="badge mvp">MVP</span></td></tr>
+<tr><td>US10</td><td>As Owner, I want to read Price List, so that I know the currently valid Prices of a Location.</td><td><span class="badge mvp">MVP</span></td></tr>
+<tr><td>US11</td><td>As Owner, I want to update Price List, so that new Prices apply to Charging Sessions started afterwards.</td><td><span class="badge mvp">MVP</span></td></tr>
+</table></div>
+<div class="epic"><div class="epic-head"><span class="id">E4</span><strong>Charger Status Management</strong><span class="story">As Owner, I want to manage the Charger Status, so that only usable Chargers are offered to Customers.</span></div>
+<table><tr><th style="width:9%">ID</th><th>User Story</th><th style="width:11%">Priority</th></tr>
+<tr><td>US12</td><td>As Owner, I want to set Charger Out of Order, so that a defective Charger cannot be used.</td><td><span class="badge mvp">MVP</span></td></tr>
+<tr><td>US13</td><td>As Owner, I want to set Charger Available, so that a repaired Charger can be used again.</td><td><span class="badge mvp">MVP</span></td></tr>
+</table></div>
+<div class="epic"><div class="epic-head"><span class="id">E5</span><strong>Network Status</strong><span class="story">As Owner / Customer, I want to view the Network Status at any time, so that I know the current Price Lists and which Chargers are available.</span></div>
+<table><tr><th style="width:9%">ID</th><th>User Story</th><th style="width:11%">Priority</th></tr>
+<tr><td>US14</td><td>As Owner, I want to read Network Status, so that I see Price Lists and Charger Status of all Locations.</td><td><span class="badge mvp">MVP</span></td></tr>
+<tr><td>US15</td><td>As Owner, I want to filter Network Status by Location, so that I can quickly check one Location.</td><td><span class="badge backlog">Backlog</span></td></tr>
+<tr><td>US16</td><td>As Customer, I want to read Network Status, so that I can find an Available Charger and its Prices.</td><td><span class="badge mvp">MVP</span></td></tr>
+<tr><td>US17</td><td>As Customer, I want to filter Network Status by Location, so that I only see Chargers near me.</td><td><span class="badge backlog">Backlog</span></td></tr>
+<tr><td>US18</td><td>As Customer, I want to filter Network Status by Charging Mode, so that I only see AC or DC Chargers.</td><td><span class="badge backlog">Backlog</span></td></tr>
+</table></div>
+<div class="epic"><div class="epic-head"><span class="id">E6</span><strong>Customer Account Management</strong><span class="story">As Customer, I want to register and manage my Customer Account, so that I can use the EV Charging Network.</span></div>
+<table><tr><th style="width:9%">ID</th><th>User Story</th><th style="width:11%">Priority</th></tr>
+<tr><td>US19</td><td>As Owner, I want to read Customer Accounts, so that I know who is registered in my EV Charging Network.</td><td><span class="badge mvp">MVP</span></td></tr>
+<tr><td>US20</td><td>As Owner, I want to deactivate Customer Account, so that misused Customer Accounts can be blocked.</td><td><span class="badge backlog">Backlog</span></td></tr>
+<tr><td>US21</td><td>As Customer, I want to create Customer Account, so that I can use the EV Charging Network.</td><td><span class="badge mvp">MVP</span></td></tr>
+<tr><td>US22</td><td>As Customer, I want to read Customer Account, so that I can check my registered data.</td><td><span class="badge mvp">MVP</span></td></tr>
+<tr><td>US23</td><td>As Customer, I want to update Customer Account, so that my data stays up to date.</td><td><span class="badge backlog">Backlog</span></td></tr>
+<tr><td>US24</td><td>As Customer, I want to delete Customer Account, so that my data is removed when I stop using the service.</td><td><span class="badge backlog">Backlog</span></td></tr>
+</table></div>
+<div class="epic"><div class="epic-head"><span class="id">E7</span><strong>Top-Up</strong><span class="story">As Customer, I want to top up my Customer Account in advance, so that I have enough Balance to charge (prepaid system).</span></div>
+<table><tr><th style="width:9%">ID</th><th>User Story</th><th style="width:11%">Priority</th></tr>
+<tr><td>US25</td><td>As Customer, I want to top up Customer Account, so that I have enough Balance to start a Charging Session.</td><td><span class="badge mvp">MVP</span></td></tr>
+<tr><td>US26</td><td>As Customer, I want to read Balance, so that I know how much money is left.</td><td><span class="badge mvp">MVP</span></td></tr>
+</table></div>
+<div class="epic"><div class="epic-head"><span class="id">E8</span><strong>Charging Session</strong><span class="story">As Customer, I want to charge my vehicle at a Charger, so that my vehicle has enough energy and the Charging Cost is billed automatically.</span></div>
+<table><tr><th style="width:9%">ID</th><th>User Story</th><th style="width:11%">Priority</th></tr>
+<tr><td>US27</td><td>As Customer, I want to start Charging Session, so that my vehicle is charged at the Prices valid at the start.</td><td><span class="badge mvp">MVP</span></td></tr>
+<tr><td>US28</td><td>As Customer, I want to end Charging Session, so that the Charging Cost is calculated and deducted from my Balance.</td><td><span class="badge mvp">MVP</span></td></tr>
+<tr><td>US29</td><td>As Customer, I want to read running Charging Session, so that I see Charged Energy and Charging Duration so far.</td><td><span class="badge backlog">Backlog</span></td></tr>
+</table></div>
+<div class="epic"><div class="epic-head"><span class="id">E9</span><strong>Transaction History</strong><span class="story">As Customer / Owner, I want to view the Transaction History of a Customer Account, so that Top-Ups, Charging Costs and the Balance are transparent.</span></div>
+<table><tr><th style="width:9%">ID</th><th>User Story</th><th style="width:11%">Priority</th></tr>
+<tr><td>US30</td><td>As Owner, I want to read Transaction History of a Customer, so that I can check Top-Ups, Charging Costs and Balance of a Customer.</td><td><span class="badge mvp">MVP</span></td></tr>
+<tr><td>US31</td><td>As Owner, I want to filter Transaction History by period, so that I can analyse a specific time range.</td><td><span class="badge backlog">Backlog</span></td></tr>
+<tr><td>US32</td><td>As Customer, I want to read Transaction History, so that I can check all my Top-Ups, Charging Sessions and my Balance.</td><td><span class="badge mvp">MVP</span></td></tr>
+<tr><td>US33</td><td>As Customer, I want to filter Transaction History by period, so that I can review a specific month.</td><td><span class="badge backlog">Backlog</span></td></tr>
+</table></div>
+</body></html>
